@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     end   
   end
 
-  resoureces :pets
+  resources :pets
   root to: 'pets#index'
 end  

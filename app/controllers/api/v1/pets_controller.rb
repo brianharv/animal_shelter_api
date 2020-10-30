@@ -3,7 +3,7 @@ module Api
     class PetsController < ApplicationController 
 
 
-     def index
+    def index # GET http://localhost:3000/api/v1/pets
       @pets = Pet.all
       json_response(@pets)
     end
@@ -22,5 +22,18 @@ module Api
       @pet = Pet.find(params[:id])
       @pet.update(pet_params)
     end  
-  end  
+
+    def destroy
+      @pet = Pet.find(params[:id])
+      @pet.destroy
+    end
+    
+    private
+
+    def pet_params
+      params.permit(:name, :type, :breed, :age)
+    end  
+    
+    end
+  end
 end   
