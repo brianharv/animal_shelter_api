@@ -36,10 +36,11 @@ module Api
       @pet.destroy
     end
 
-    def get_random_pet
-      @pet_first = Pet.all.first
-      @pet_last = Pet.all.last
-      random_pet = rand(@pet_first..@pet_last)
+    def random_pet #WHY DOES THIS NOT WORK????
+      @count = Pet.all.length
+      @random_pet = rand(1..@count)
+      @pet = Pet.find(@random_pet)
+      json_response(@pet)
     end  
     
     private
