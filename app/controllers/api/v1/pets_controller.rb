@@ -4,7 +4,11 @@ module Api
 
 
     def index # GET http://localhost:3000/api/v1/pets
+      if name = params[:name]
+        @pets = Pet.search_by_name(name)
+      else    
       @pets = Pet.all
+      end
       json_response(@pets)
     end
 
