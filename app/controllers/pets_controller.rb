@@ -1,6 +1,4 @@
 class PetsController < ApplicationController
-  class PetsController < ApplicationController 
-
 
     def index # GET http://localhost:3000/api/v1/pets
       @pets = Pet.all
@@ -32,6 +30,4 @@ class PetsController < ApplicationController
     def pet_params
       params.permit(:name, :type, :breed, :age)
     end  
-    
-    end
 end

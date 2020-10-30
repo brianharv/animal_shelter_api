@@ -10,21 +10,23 @@ class Seed
     25.times do |i|
       pet = Pet.create!(
         name: Faker::Creature::Dog.name,
-        type: 'Dog',
+        species: "dog",
         breed: Faker::Creature::Dog.breed,
-        age: rand(1..15)
+        age: rand(1..15),
+        bio: Faker::TvShows::MichaelScott.quote
       )
-    puts "Generated a #{pet.type} named: #{pet.name}."  
+    puts "Generated a #{pet.species} named: #{pet.name}."  
     end
 
     25.times do |j|
       pet = Pet.create!(
         name: Faker::Creature::Cat.name,
-        type: 'Cat',
+        species: "cat",
         breed: Faker::Creature::Cat.breed,
-        age: rand(1..20)
+        age: rand(1..20),
+        bio: Faker::TvShows::MichaelScott.quote
       )
-    puts "Generated a #{pet.type} named: #{pet.name}."   
+    puts "Generated a #{pet.species} named: #{pet.name}."   
     end
   end
 end
