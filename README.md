@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+https://chriskottom.com/blog/2017/04/versioning-a-rails-api/#:~:text=So%20yes%2C%20unless%20you're,your%20app%20really%20needs%20it.
