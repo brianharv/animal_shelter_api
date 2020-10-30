@@ -20,10 +20,10 @@ class Seed
 
     25.times do |j|
       pet = Pet.create!(
-        name: Faker::Creature::Cat.name,
+        name: Faker::Creature::Dog.name,
         species: "cat",
-        breed: Faker::Creature::Cat.breed,
-        age: rand(1..20),
+        breed: Faker::Creature::Dog.breed,
+        age: rand(1..15),
         bio: Faker::TvShows::MichaelScott.quote
       )
     puts "Generated a #{pet.species} named: #{pet.name}."   
