@@ -35,6 +35,12 @@ module Api
       @pet = Pet.find(params[:id])
       @pet.destroy
     end
+
+    def get_random_pet
+      @pet_first = Pet.all.first
+      @pet_last = Pet.all.last
+      random_pet = rand(@pet_first..@pet_last)
+    end  
     
     private
 
