@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
-    # concern :api_base do
-      resources :pets
-end    
-#   end  
+  # devise_for :users
+  # end    
+  namespace :api do
+    namespace :v1 do
+      resources :pets  
+    end   
+  end
 
-#   namespace :v1 do
-#     concerns :api_base
-#   end  
-# end
+  resoureces :pets
+  root to: 'pets#index'
+end  
