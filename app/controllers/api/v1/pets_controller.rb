@@ -37,9 +37,9 @@ module Api
     end
 
     def random_pet #WHY DOES THIS NOT WORK????
-      @count = Pet.all.length
-      @random_pet = rand(1..@count)
-      @pet = Pet.find(@random_pet)
+      count = Pet.all.length
+      random_pet = rand(1..count)
+      @pet = Pet.find(random_pet)
       json_response(@pet)
     end  
     
