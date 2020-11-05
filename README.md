@@ -23,13 +23,14 @@ _An API centered on making the pet adoption process much simpler. Dogs and Cats 
 
 ## Endpoints
 
-* GET '/api/v1/pets' - Returns an index of all available pets.
-* GET '/api/v1/pets/:id' - Returns an individual pet entry.
-* POST '/api/v1/pets' - Add a pet entry to the API.
-* PUT '/api/v1/pets/:id' - Update a specific pet entry.
-* DELETE '/api/v1/pets/:id' - Delete a specific pet entry.
-* GET ''/api/v1/pets?name= - Allows user to search by pet name.
-
+| VERB   | ROUTE                        | CRUD   | DESCRIPTION                                        |
+|--------|------------------------------|--------|----------------------------------------------------|
+| GET    | /api/v1/pets                 | READ   | Returns an index of all available pets.            |
+| GET    | /api/v1/{PET ID}             | READ   | Finds a pet by its :id which is an unique integer. |
+| POST   | /api/v1/pets                 | CREATE | Add a pet entry to the API.                        |
+| PUT    | /api/v1/{PET ID}             | PATCH  | Edit an entry.                                     |
+| DELETE | /api/v1/pets/{PET ID}        | DELETE | Delete an entry.                                   |
+| GET    | /api/v1/pets?name={PET NAME} | READ   | Search for pet by name.                            |
 
 
 ## Known Bugs
