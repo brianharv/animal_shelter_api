@@ -28,8 +28,8 @@ _An API centered on making the pet adoption process much simpler. Dogs and Cats 
 | GET    | /api/v1/pets                 | READ   | Returns an index of all available pets.            |
 | GET    | /api/v1/{PET ID}             | READ   | Finds a pet by its :id which is an unique integer. |
 | POST   | /api/v1/pets?name= {PET NAME}&?bio={BRIEF BIO}&?age={PET AGE}&?breed={PET BREED}&?species={DOG or CAT}               | CREATE | Add a pet entry to the API.                        |
-| PUT    | /api/v1/{PET ID}             | PATCH  | Edit an entry.                                     |
-| DELETE | /api/v1/pets/{PET ID}?{PARAM}={PARAM TO CHANGE}        | DELETE | Delete an entry.                                   |
+| PUT    | /api/v1/{PET ID}?{PARAM}={PARAM TO CHANGE}             | PATCH  | Edit an entry.                                     |
+| DELETE | /api/v1/pets/{PET ID}        | DELETE | Delete an entry.                                   |
 | GET    | /api/v1/pets?name={PET NAME} | READ   | Search for pet by name.                            |
 
 
